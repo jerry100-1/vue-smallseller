@@ -1,0 +1,46 @@
+import request from '@/utils/request'
+
+export function fetchTree(query) {
+  return request({
+    url: '/api/admin/menu/tree',
+    method: 'get',
+    params: query
+  });
+}
+
+export function fetchAll() {
+  return request({
+    url: '/api/admin/menu/all',
+    method: 'get'
+  });
+}
+export function addObj(obj) {
+  return request({
+    url: '/api/admin/menu',
+    method: 'post',
+    params: obj
+  });
+}
+
+export function getObj(id) {
+  return request({
+    url: '/api/admin/menu/' + id,
+    method: 'get'
+  })
+}
+
+export function delObj(id) {
+  return request({
+    url: '/api/admin/menu/' + id,
+    method: 'delete'
+  })
+}
+
+export function putObj(obj) {
+  return request({
+    url: '/api/admin/menu/',
+    method: 'put',
+    params: obj
+  })
+}
+
